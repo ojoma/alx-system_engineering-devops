@@ -1,0 +1,10 @@
+#!/bin/bash
+owner= $(stat -c '%u' /root/alx-system_engineering-devops/0x01-shell_permissions/hello)
+echo $owner
+name_check=guillaume
+echo $name_check
+if [ "x${owner}" = $name_check ]; then
+    chown betty hello
+ else 
+     echo no such owner
+ fi  
